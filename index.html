@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Monitor de Portfolio</h1>
+    </header>
+
+    <main>
+        <section id="add-transaction">
+            <h2>Agregar Compra</h2>
+            <form id="transaction-form">
+                <input type="text" id="ticker" placeholder="Ticker (ej. AAPL, BTC-USD)" required />
+                <input type="number" step="any" id="cantidad" placeholder="Cantidad" required />
+                <input type="number" step="any" id="precio" placeholder="Precio" required />
+                <input type="date" id="fecha" />
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+
+        <section id="resumen">
+            <h2>Resumen</h2>
+            <div id="portfolio-metrics">
+                <div><strong>Inversión Total:</strong> <span id="total-invested">0</span></div>
+                <div><strong>Valor Actual:</strong> <span id="current-value">0</span></div>
+                <div><strong>Ganancia/Pérdida:</strong> <span id="total-pl">0</span></div>
+                <div><strong>Rentabilidad:</strong> <span id="total-return">0%</span></div>
+            </div>
+            <table id="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>Ticker</th>
+                        <th>Cantidad</th>
+                        <th>Precio Promedio</th>
+                        <th>Precio Actual</th>
+                        <th>Valor</th>
+                        <th>Ganancia/Pérdida</th>
+                        <th>Var %</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section id="historial">
+            <h2>Historial de Compras</h2>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>Ticker</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section id="acciones">
+            <button id="exportar">Exportar Datos</button>
+            <input type="file" id="importar" style="display:none" />
+            <button id="importar-btn">Importar Datos</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Los precios se obtienen de Yahoo Finance.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
