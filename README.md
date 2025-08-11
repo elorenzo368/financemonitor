@@ -1,11 +1,17 @@
 # Monitor de Portfolio
 
-Aplicación web sencilla para llevar el control de compras de acciones, CEDEARs y criptomonedas. Permite:
+Aplicación web basada en Next.js para llevar el control de compras y ventas de acciones, CEDEARs y criptomonedas.
 
-- Registrar compras con ticker, cantidad, precio y fecha.
-- Calcular precio promedio de compra por ticker.
-- Obtener cotizaciones actuales desde [Yahoo Finance](https://finance.yahoo.com).
-- Ver desempeño de cada activo y del portfolio total.
-- Exportar e importar datos almacenados en `localStorage`.
+## Características
 
-Para usarla solo es necesario abrir `index.html` en un navegador moderno con acceso a internet.
+- Registro de operaciones de compra y venta.
+- Resumen por ticker con cantidad, precio promedio, PNL no realizado y PNL realizado.
+- Histórico de operaciones disponible bajo demanda.
+- Diseño con Tailwind CSS.
+- Los datos se guardan en `data/transactions.json` mediante rutas API de Next.js.
+
+## Desarrollo
+
+1. Instalar dependencias: `npm install`
+2. Ejecutar en modo desarrollo: `npm run dev`
+3. Compilar para producción: `npm run build`
